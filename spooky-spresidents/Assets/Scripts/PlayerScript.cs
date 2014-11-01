@@ -57,13 +57,8 @@ public class PlayerScript : MonoBehaviour {
 			}
 		} 
 
-<<<<<<< HEAD
-		if (Input.GetButtonDown ("Jump")) {
-			body.rigidbody2D.AddForce (new Vector2(0, 5), ForceMode2D.Impulse);
-=======
 		if (Input.GetButtonDown ("Jump") && controller.isGrounded) {
 			rigidbody2D.AddForce(new Vector2(0,5));
->>>>>>> ed9f0bbdbeffe1d1d646eb1a4d0a55c06ea1e076
 		}
 	}
 }
