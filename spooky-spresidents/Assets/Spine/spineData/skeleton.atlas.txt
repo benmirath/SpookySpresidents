@@ -1,0 +1,48 @@
+
+skeleton.png
+size: 512,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+living_arm1
+  rotate: false
+  xy: 280, 8
+  size: 52, 44
+  orig: 52, 44
+  offset: 0, 0
+  index: -1
+living_arm2
+  rotate: false
+  xy: 334, 14
+  size: 24, 38
+  orig: 24, 38
+  offset: 0, 0
+  index: -1
+living_body
+  rotate: true
+  xy: 218, 2
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: -1
+living_head_1
+  rotate: true
+  xy: 2, 4
+  size: 48, 70
+  orig: 48, 70
+  offset: 0, 0
+  index: -1
+living_head_2
+  rotate: true
+  xy: 74, 4
+  size: 48, 70
+  orig: 48, 70
+  offset: 0, 0
+  index: -1
+living_head_3
+  rotate: true
+  xy: 146, 4
+  size: 48, 70
+  orig: 48, 70
+  offset: 0, 0
+  index: -1

@@ -34,7 +34,7 @@ public class GhostScript : MonoBehaviour {
 
 	float bounceTimer = 1.0f;
 	float bounceDist = -10.0f;
-	float bounceSpeed = .5f;
+	float bounceSpeed = .25f;
 
 	public void StartBounce () {
 		Debug.Log ("working");
