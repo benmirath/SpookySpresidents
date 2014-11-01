@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class CameraFollowScript : MonoBehaviour {
+	public PlayerScript target;
 
 	// Use this for initialization
 	void Start () {

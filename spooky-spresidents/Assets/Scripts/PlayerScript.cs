@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
 	public bool jumpDown;
 
 	public CharacterController2D controller;
+	public GameObject body;
 
 	// Use this for initialization
 	void Awake () {
@@ -24,6 +25,8 @@ public class PlayerScript : MonoBehaviour {
 //		slowedVSpeed = 30;
 //		fastHSpeed = 5;
 //		fastVSpeed = 5;
+
+//		rigidbody2D = GetComponentInChildren<Rigidbody2D> ();
 	}
 
 	void Start () {
@@ -56,8 +59,8 @@ public class PlayerScript : MonoBehaviour {
 			}
 		} 
 
-		if (Input.GetButtonDown ("Jump") && controller.isGrounded) {
-			rigidbody2D.AddForce (new Vector2(0, 5), ForceMode2D.Impulse);
+		if (Input.GetButtonDown ("Jump")) {
+			body.rigidbody2D.AddForce (new Vector2(0, 5), ForceMode2D.Impulse);
 		}
 	}
 }
