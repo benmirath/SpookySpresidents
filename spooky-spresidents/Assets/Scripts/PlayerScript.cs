@@ -27,8 +27,6 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void Start () {
-	
-
 		currentHSpeed = defaultHSpeed;
 		currentVSpeed = defaultVSpeed;
 
@@ -40,7 +38,7 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		float xInput = Input.GetAxis ("Horizontal");
-		float yInput = Input.GetAxis ("Vertical");
+		//float yInput = Input.GetAxis ("Vertical");
 
 		//Directional movement
 		if (xInput != 0) {
@@ -57,7 +55,7 @@ public class PlayerScript : MonoBehaviour {
 		} 
 
 		if (Input.GetButtonDown ("Jump") && controller.isGrounded) {
-			rigidbody2D.AddForce (new Vector2(0, 5), ForceMode2D.Impulse);
+			rigidbody2D.AddForce(new Vector2(0,5));
 		}
 	}
 }
