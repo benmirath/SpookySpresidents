@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour {
 	public bool tractionDown;
 	public bool jumpDown;
 
-	public CharacterController2D controller;
+//	public CharacterController2D controller;
 	public GameObject body;
 
 	// Use this for initialization
@@ -44,21 +44,21 @@ public class PlayerScript : MonoBehaviour {
 		//float yInput = Input.GetAxis ("Vertical");
 
 		//Directional movement
-		if (xInput != 0) {
-			if (xInput > 0) {
-
-				controller.move(new Vector3(currentHSpeed, 0, 0));
-//				rigidbody2D.AddForce(new Vector2(currentHSpeed,0), ForceMode2D.Impulse);
-
-			} else {
-				controller.move(new Vector3(-currentHSpeed, 0, 0));
-//				rigidbody2D.AddForce(new Vector2(-currentHSpeed,0), ForceMode2D.Impulse);
-
-			}
-		} 
-
-		if (Input.GetButtonDown ("Jump") && controller.isGrounded) {
-			rigidbody2D.AddForce(new Vector2(0,5));
-		}
+//		if (xInput != 0) {
+//			if (xInput > 0) {
+//
+//				controller.move(new Vector3(currentHSpeed, 0, 0));
+////				rigidbody2D.AddForce(new Vector2(currentHSpeed,0), ForceMode2D.Impulse);
+//
+//			} else {
+//				controller.move(new Vector3(-currentHSpeed, 0, 0));
+////				rigidbody2D.AddForce(new Vector2(-currentHSpeed,0), ForceMode2D.Impulse);
+//
+//			}
+//		} 
+//
+//		if (Input.GetButtonDown ("Jump") && controller.isGrounded) {
+//			rigidbody2D.AddForce(new Vector2(0,5));
+//		}
 	}
 }
