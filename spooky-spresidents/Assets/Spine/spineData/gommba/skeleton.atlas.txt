@@ -1,0 +1,55 @@
+
+skeleton.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pirate_arm1
+  rotate: false
+  xy: 180, 42
+  size: 34, 20
+  orig: 34, 20
+  offset: 0, 0
+  index: -1
+pirate_arm2
+  rotate: true
+  xy: 134, 2
+  size: 18, 32
+  orig: 18, 32
+  offset: 0, 0
+  index: -1
+pirate_body
+  rotate: false
+  xy: 134, 22
+  size: 44, 40
+  orig: 44, 40
+  offset: 0, 0
+  index: -1
+pirate_head_1
+  rotate: false
+  xy: 2, 8
+  size: 64, 54
+  orig: 64, 54
+  offset: 0, 0
+  index: -1
+pirate_head_2
+  rotate: false
+  xy: 68, 8
+  size: 64, 54
+  orig: 64, 54
+  offset: 0, 0
+  index: -1
+pirate_leg1
+  rotate: false
+  xy: 216, 42
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+pirate_leg2
+  rotate: false
+  xy: 180, 20
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
