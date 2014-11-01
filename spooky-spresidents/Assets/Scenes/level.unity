@@ -86,6 +86,7 @@ GameObject:
   - 61: {fileID: 1046320996}
   - 50: {fileID: 1046320997}
   - 114: {fileID: 1046320998}
+  - 114: {fileID: 1046320999}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1046320993}
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 0
@@ -164,17 +165,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c0c36da548a4d86a66d69c403d9996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHSpeed: 0
-  currentVSpeed: 0
-  defaultHSpeed: 0
-  defaultVSpeed: 0
-  slowedHSpeed: 0
-  slowedVSpeed: 0
-  fastHSpeed: 0
-  fastVSpeed: 0
+  defaultHSpeed: .200000003
+  defaultVSpeed: .200000003
+  slowedHSpeed: 10
+  slowedVSpeed: 10
+  fastHSpeed: 30
+  fastVSpeed: 30
   slowedDown: 0
   tractionDown: 0
   jumpDown: 0
+  controller: {fileID: 1046320999}
+--- !u!114 &1046320999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046320993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e2f7796f4284d80b4929299e653538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usePhysicsForMovement: 0
+  _skinWidth: .0199999996
+  platformMask:
+    serializedVersion: 2
+    m_Bits: 0
+  oneWayPlatformMask:
+    serializedVersion: 2
+    m_Bits: 0
+  slopeLimit: 30
+  slopeSpeedMultiplier:
+    serializedVersion: 2
+    m_Curve:
+    - time: -90
+      value: 1.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 90
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  totalHorizontalRays: 8
+  totalVerticalRays: 4
+  createTriggerHelperGameObject: 0
+  triggerHelperBoxColliderScale: .949999988
 --- !u!1 &1532260482
 GameObject:
   m_ObjectHideFlags: 0

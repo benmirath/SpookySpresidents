@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
-	public float currentHSpeed;
-	public float currentVSpeed;
+	private float currentHSpeed;
+	private float currentVSpeed;
 	public float defaultHSpeed;
 	public float defaultVSpeed;
 	public float slowedHSpeed;
@@ -14,15 +14,20 @@ public class PlayerScript : MonoBehaviour {
 	public bool tractionDown;
 	public bool jumpDown;
 
+	public CharacterController2D controller;
 
 	// Use this for initialization
+	void Awake () {
+//		defaultHSpeed = 15;
+//		defaultVSpeed = 15;
+//		slowedHSpeed = 30;
+//		slowedVSpeed = 30;
+//		fastHSpeed = 5;
+//		fastVSpeed = 5;
+	}
+
 	void Start () {
-		defaultHSpeed = 15;
-		defaultVSpeed = 15;
-		slowedHSpeed = 30;
-		slowedVSpeed = 30;
-		fastHSpeed = 5;
-		fastVSpeed = 5;
+	
 
 		currentHSpeed = defaultHSpeed;
 		currentVSpeed = defaultVSpeed;
@@ -40,23 +45,19 @@ public class PlayerScript : MonoBehaviour {
 		//Directional movement
 		if (xInput != 0) {
 			if (xInput > 0) {
-				rigidbody2D.AddForce(new Vector2(currentHSpeed,0));
+
+				controller.move(new Vector3(currentHSpeed, 0, 0));
+//				rigidbody2D.AddForce(new Vector2(currentHSpeed,0), ForceMode2D.Impulse);
 
 			} else {
-				rigidbody2D.AddForce(new Vector2(-currentHSpeed,0));
+				controller.move(new Vector3(-currentHSpeed, 0, 0));
+//				rigidbody2D.AddForce(new Vector2(-currentHSpeed,0), ForceMode2D.Impulse);
 
 			}
-		} else if (yInput != 0) {
-			if (yInput > 0) {
+		} 
 
-			} else {
-
-			}
-		
-		}
-
-		if (Input.GetButtonDown ("Jump")) {
-//			rigidbody2D.AddForce
+		if (Input.GetButtonDown ("Jump") && controller.isGrounded) {
+			rigidbody2D.AddForce (new Vector2(0, 5), ForceMode2D.Impulse);
 		}
 	}
 }
