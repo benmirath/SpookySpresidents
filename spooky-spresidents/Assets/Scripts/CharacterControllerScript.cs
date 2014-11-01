@@ -13,6 +13,9 @@ public class CharacterControllerScript : MonoBehaviour {
 	public bool slowedDown;
 	public bool tractionDown;
 	public bool jumpDown;
+	bool alive = true;
+
+	public SkeletonAnimation animation;
 
 	public float maxSpeed = 10f;
 	bool facingRight = true;
@@ -25,9 +28,10 @@ public class CharacterControllerScript : MonoBehaviour {
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
 
-	public float jumpCount = 2f;
-	float jumpCountStore;
-	public float jumpForce = 500f;
+	public int jumpCount = 2;
+	int jumpCountStore;
+//	public float jumpForce = 500f;
+	public float jumpForce = 6f;
 
 	// Use this for initialization
 	void Start (){
@@ -46,56 +50,82 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	void FixedUpdate () {
 		//Set the boolean "Ground" based on the small Vector3 called groundCheck, that will toggle based on whatever is or isn't ground
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		//anim.SetBool ("Ground", grounded);
+		if (alive) {
+			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+			//anim.SetBool ("Ground", grounded);
 
-		//If I'm on the ground, reset my available jumps back to the default
-		if (grounded) {
-			jumpCount = jumpCountStore;
-		}
+			//If I'm on the ground, reset my available jumps back to the default
+			if (grounded) {
+					jumpCount = jumpCountStore;
+			}
 
-		//Set the vSpeed value in our animator based on our upward velocity
-		//anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+			//Set the vSpeed value in our animator based on our upward velocity
+			//anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
-		/*
-			//Use this if you want to have no air control during jumps
-			if (!grounded) return;
-		*/
+			/*
+//Use this if you want to have no air control during jumps
+if (!grounded) return;
+*/
 
-		//Get a new float based on our Horizontal movement input
-		currentHSpeed = Input.GetAxis ("Horizontal");
-		currentVSpeed = Input.GetAxis ("Vertical");
-		//Set the Speed value in our animator based on the move float
-		//anim.SetFloat ("Speed", Mathf.Abs (move));
-		//anim.SetFloat ("cSpeed", move_v);
+			//Get a new float based on our Horizontal movement input
+			currentHSpeed = Input.GetAxis ("Horizontal");
+//		currentVSpeed = Input.GetAxis ("Vertical");
+			//Set the Speed value in our animator based on the move float
+			//anim.SetFloat ("Speed", Mathf.Abs (move));
+			//anim.SetFloat ("cSpeed", move_v);
 
-		//Move our character ten times our move input
-		if (!crouching) {
-			rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
-			hitBox.enabled = true;
-		} else {
-			hitBox.enabled = false;
-		}
+			//Move our character ten times our move input
+			if (!crouching) {
+				rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
+				if (rigidbody2D.velocity != Vector2.zero) {
+					if (rigidbody2D.velocity.y != 0)
+						animation.AnimationName = "Jump";
+					else
+						animation.AnimationName = "Walking";
 
-		if (currentVSpeed < 0) {
-			crouching = true;
-		} else {
-			crouching = false;
-		}
+				} else {
+					animation.AnimationName = "Idle";
+				}
+				hitBox.enabled = true;
+			} else {
+				hitBox.enabled = false;
+			}
 
-		//If we are moving and facing left, flip; Or if we are not moving and facing right, flip
-		if (currentHSpeed > 0 && !facingRight) {
-			Flip();
-		} else if (currentHSpeed < 0 && facingRight) {
-			Flip();
+			if (currentVSpeed < 0) {
+				crouching = true;
+			} else {
+				crouching = false;
+			}
+
+			//If we are moving and facing left, flip; Or if we are not moving and facing right, flip
+			if (currentHSpeed > 0 && !facingRight) {
+				Flip ();
+			} else if (currentHSpeed < 0 && facingRight) {
+				Flip ();
+			}
 		}
 	}
 
+	void Die () {
+
+	}
+
+
 	void Update(){
-		if ((grounded || jumpCount > 1) && Input.GetButtonDown("Jump")) {
-			//anim.SetBool ("Ground", grounded);
-			rigidbody2D.AddForce (new Vector2 (0, jumpForce));
-			jumpCount -= 1;
+		if (alive) {
+			Debug.Log (animation.state);
+			if ((grounded || jumpCount > 1) && Input.GetButtonDown ("Jump")) {
+
+				//anim.SetBool ("Ground", grounded);
+//				rigidbody2D.AddForce (new Vector2 (0, jumpForce));
+				rigidbody2D.AddForce(transform.up * jumpForce);
+				Debug.Log(rigidbody2D.velocity);
+				Debug.Log(jumpForce);
+				jumpCount -= 1;
+//				animation.loop = false;
+//				animation.AnimationName = "Jump";
+//			if (animation.state
+			}
 		}
 	}
 
