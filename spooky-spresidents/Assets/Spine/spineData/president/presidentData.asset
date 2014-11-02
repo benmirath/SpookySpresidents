@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: New SkeletonData
+  m_Name: presidentData
   m_EditorClassIdentifier: 
-  atlasAsset: {fileID: 0}
-  skeletonJSON: {fileID: 0}
+  atlasAsset: {fileID: 11400000, guid: d878a785821494c259a0b45db476ae28, type: 2}
+  skeletonJSON: {fileID: 4900000, guid: f49d48ad6d6b14bf3a10d8fb9982a1ec, type: 3}
   scale: 1
   fromAnimation: []
   toAnimation: []

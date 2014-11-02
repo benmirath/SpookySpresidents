@@ -33,7 +33,7 @@ public class GhostScript : MonoBehaviour {
 	}
 
 	float bounceTimer = 1.0f;
-	float bounceDist = -10.0f;
+	float bounceDist = -5.0f;
 	float bounceSpeed = .25f;
 
 	public void StartBounce () {
@@ -44,35 +44,17 @@ public class GhostScript : MonoBehaviour {
 		float originalYPos = level.rigidbody2D.position.y;
 		float destinationYPos = level.rigidbody2D.position.y - bounceDist;
 
-		Debug.Log (originalYPos);
-		Debug.Log (destinationYPos);
-		Debug.Log (level.rigidbody2D);
-
-//		level.rigidbody2D.AddForce (new Vector2 (0, -200f), ForceMode2D.Impulse);
-
 		while (level.rigidbody2D.position.y > bounceDist) {
 			level.rigidbody2D.MovePosition (new Vector2 (0, level.rigidbody2D.position.y-bounceSpeed));
-//			level.rigidbody2D.AddForce (new Vector2 (0, bounceSpeed), ForceMode2D.Impulse);
 			Debug.Log(level.rigidbody2D.position);
 			yield return new WaitForFixedUpdate();
 		}
 		while (level.rigidbody2D.position.y < originalYPos) {
 			level.rigidbody2D.MovePosition (new Vector2 (0, level.rigidbody2D.position.y+bounceSpeed));
-//			level.rigidbody2D.AddForce (new Vector2 (0, bounceSpeed), ForceMode2D.Impulse);
 			Debug.Log(level.rigidbody2D.position);
 			yield return new WaitForFixedUpdate();
 		} 
 		yield break;
-
-
-//		while (level.transform.position.y > bounceDist) {
-//			level.transform.position = Vector2.Lerp (new Vector2 (level.transform.position.x, level.transform.position.y), new Vector2 (level.transform.position.x, destinationYPos), bounceSpeed);		
-//			yield return null;
-//		}
-//		while (level.transform.position.y < originalYPos) {
-//			level.transform.position = Vector2.Lerp(new Vector2(level.transform.position.x, level.transform.position.y), new Vector2(level.transform.position.x, originalYPos), bounceSpeed);		
-//			yield return null;
-//		}
 		Debug.Log ("Done");
 		yield break;
 	}
