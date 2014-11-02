@@ -20,7 +20,7 @@ public class GhostScript : MonoBehaviour {
 	public delegate void FourthPower();
 	public static event FourthPower OnFourthPower;
 
-	public GUIScript GUIName;
+	public GameObject GUIStuff;
 
 	// Use this for initialization
 	void Start () {
@@ -30,21 +30,20 @@ public class GhostScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-
 		if (Input.GetButtonDown ("Power 1") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3")) {
 					
 		}
-		if (Input.GetButtonDown ("Power 1") && OnFirstPower != null) {
+		if (Input.GetButtonDown ("Power 1") && OnFirstPower != null && !GUIStuff.transform.FindChild("levelBounce").GetComponent<GUIScript>().HasUsedPower) {
 			OnFirstPower();
+			Debug.Log("Working!!");
 		}
-		if (Input.GetButtonDown ("Power 2") && OnSecondPower != null) {
+		if (Input.GetButtonDown ("Power 2") && OnSecondPower != null && !GUIStuff.transform.FindChild("enemyBounce").GetComponent<GUIScript>().HasUsedPower) {
 			OnSecondPower();
 		}
-		if (Input.GetButtonDown ("Power 3") && OnThirdPower != null) {
+		if (Input.GetButtonDown ("Power 3") && OnThirdPower != null && !GUIStuff.transform.FindChild("objectBounce").GetComponent<GUIScript>().HasUsedPower) {
 			OnThirdPower();
 		}
-		if (Input.GetButtonDown ("Power 4") && OnFourthPower != null) {
+		if (Input.GetButtonDown ("Power 4") && OnFourthPower != null && !GUIStuff.transform.FindChild("timeSlow").GetComponent<GUIScript>().HasUsedPower) {
 			OnFourthPower();
 		}
 	}
@@ -54,7 +53,7 @@ public class GhostScript : MonoBehaviour {
 	public float bounceSpeed = .25f;
 
 	public void StartBounce () {
-		Debug.Log ("working");
+		//Debug.Log ("working");
 		StartCoroutine (levelBounce());
 	}
 	public IEnumerator levelBounce () {

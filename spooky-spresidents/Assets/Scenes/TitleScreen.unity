@@ -1597,7 +1597,7 @@ MonoBehaviour:
   autoPhase: 1
   phase: .5
   grayscale: 0
-  noiseIntensity: .556999981
+  noiseIntensity: .442000002
   scanlinesIntensity: 2
   scanlinesCount: 768
   distortion: .200000003
