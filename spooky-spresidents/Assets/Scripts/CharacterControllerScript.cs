@@ -114,6 +114,7 @@ if (!grounded) return;
 
 	void Die () {
 		GameObject.Destroy (this.gameObject);
+		Application.LoadLevel ("TitleScreen");
 	}
 
 

@@ -13,11 +13,14 @@ public class JumpKill : MonoBehaviour {
 	
 	}
 
+	public CharacterControllerScript player;
 	void OnTriggerEnter2D (Collider2D collision) {
 		Debug.Log (collision);
 		if (collision.tag == "Enemy") {
-			Debug.Log ("working");
+//			Debug.Log ("working");
+
 			GameObject.Destroy(collision.gameObject);
+			player.rigidbody2D.AddForce(transform.up * player.jumpForce * 1.5f);
 		}
 	}
 }
