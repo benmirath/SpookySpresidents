@@ -29,6 +29,8 @@ public class PlayerScript : MonoBehaviour {
 //		rigidbody2D = GetComponentInChildren<Rigidbody2D> ();
 	}
 
+
+
 	void Start () {
 		currentHSpeed = defaultHSpeed;
 		currentVSpeed = defaultVSpeed;

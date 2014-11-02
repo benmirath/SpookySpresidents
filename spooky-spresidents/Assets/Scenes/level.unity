@@ -88,6 +88,7 @@ GameObject:
   - 114: {fileID: 190302199}
   - 50: {fileID: 190302200}
   - 61: {fileID: 190302201}
+  - 61: {fileID: 190302202}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -204,10 +205,21 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 190302194}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Size: {x: 75.1276703, y: 89.6271439}
+  m_Center: {x: -4.25383568, y: 44.5464249}
+--- !u!61 &190302202
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 190302194}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 98.2399979, y: 89.6271439}
   m_Center: {x: -4.25383568, y: 44.5464249}
 --- !u!1 &272894965
 GameObject:
@@ -247,6 +259,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 453856298}
+  - 61: {fileID: 453856299}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -266,6 +279,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1661283215}
   m_RootOrder: 0
+--- !u!61 &453856299
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 453856297}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: .349999994, y: .0900000036}
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &941631044
 Prefab:
   m_ObjectHideFlags: 0
@@ -275,7 +299,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: d0fedda9ab1bb4dad9e5f29673be0d3b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.29250002
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d0fedda9ab1bb4dad9e5f29673be0d3b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -526,7 +550,7 @@ Transform:
   m_PrefabInternal: {fileID: 941631044}
   m_GameObject: {fileID: 1591529866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.29250002, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1661283215}
@@ -568,6 +592,7 @@ GameObject:
   - 61: {fileID: 1661283221}
   - 50: {fileID: 1661283220}
   - 114: {fileID: 1661283219}
+  - 61: {fileID: 1661283222}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -698,6 +723,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 95.1376114, y: 133.54808}
   m_Center: {x: 11.6454754, y: 66.6421432}
+--- !u!61 &1661283222
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661283214}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 95.1376114, y: 133.54808}
+  m_Center: {x: 11.6454601, y: 66.6421432}
 --- !u!1001 &1729433448
 Prefab:
   m_ObjectHideFlags: 0
