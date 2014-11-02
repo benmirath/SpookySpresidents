@@ -126,7 +126,7 @@ if (!grounded) return;
 				Debug.Log(rigidbody2D.velocity);
 				Debug.Log(jumpForce);
 				jumpCount -= 1;
-				animation.loop = false;
+//				animation.loop = false;
 			}
 		}
 	}

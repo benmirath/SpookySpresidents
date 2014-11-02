@@ -8,6 +8,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 61: {fileID: 6100002}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -31,7 +33,7 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +49,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +106,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.29250002, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -190,7 +192,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -207,6 +209,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 95.1376114, y: 133.54808}
   m_Center: {x: 11.6454754, y: 66.6421432}
+--- !u!61 &6100002
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: .349999994, y: .300000012}
+  m_Center: {x: 0, y: 0}
 --- !u!81 &8100000
 AudioListener:
   m_ObjectHideFlags: 1
@@ -269,7 +282,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpCount: 2
-  jumpForce: 1000
+  jumpForce: 2000
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +305,18 @@ MonoBehaviour:
   timeScale: 1
   loop: 1
   _animationName: Idle
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aaa1907325f4ceb8bb21bd6325e503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 11400002}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

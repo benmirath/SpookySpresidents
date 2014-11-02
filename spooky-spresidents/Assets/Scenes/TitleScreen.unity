@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: ef3341a93f24a4be2a32e7cce6de714d, type: 3}
   m_Type: 0
@@ -135,7 +135,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 47092916}
-  m_HideIfInvisible: 0
 --- !u!1 &100161975
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 0e58b3d222d4743b0995f97529649535, type: 3}
   m_Type: 0
@@ -197,7 +196,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100161975}
-  m_HideIfInvisible: 0
 --- !u!1 &155932826
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: f723eeafe4bf744ccb72d87553ec6d4a, type: 3}
   m_Type: 0
@@ -405,7 +403,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 253097824}
-  m_HideIfInvisible: 0
 --- !u!1 &295284313
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 38369dcf3378443bfbda22de66e5e333, type: 3}
   m_Type: 0
@@ -467,7 +464,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 295284313}
-  m_HideIfInvisible: 0
 --- !u!1 &338494407
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 0dda0e5edb04f459e86b6690f092689c, type: 3}
   m_Type: 0
@@ -529,7 +525,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 338494407}
-  m_HideIfInvisible: 0
 --- !u!1 &407455219
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +572,6 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!224 &407455222
@@ -644,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 38369dcf3378443bfbda22de66e5e333, type: 3}
   m_Type: 0
@@ -660,7 +654,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 447609763}
-  m_HideIfInvisible: 0
 --- !u!1 &705466892
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: ef3341a93f24a4be2a32e7cce6de714d, type: 3}
   m_Type: 0
@@ -722,7 +715,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 705466892}
-  m_HideIfInvisible: 0
 --- !u!1 &716853395
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 0e58b3d222d4743b0995f97529649535, type: 3}
   m_Type: 0
@@ -784,7 +776,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 716853395}
-  m_HideIfInvisible: 0
 --- !u!1 &765852186
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,8 +847,8 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
   m_TargetGraphic: {fileID: 765852189}
+  m_Interactable: 1
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -872,7 +863,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_Enabled: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &765852189
@@ -886,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: .588}
   m_Sprite: {fileID: 21300000, guid: fb30389cb3c3e44118d0dd4ec0949c14, type: 3}
   m_Type: 0
@@ -902,7 +893,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 765852186}
-  m_HideIfInvisible: 0
 --- !u!95 &765852191
 Animator:
   serializedVersion: 3
@@ -975,7 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: b7333827c83424a76819926e8c76af20, type: 3}
   m_Type: 0
@@ -991,7 +981,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 964558529}
-  m_HideIfInvisible: 0
 --- !u!95 &964558533
 Animator:
   serializedVersion: 3
@@ -1094,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: ef3341a93f24a4be2a32e7cce6de714d, type: 3}
   m_Type: 0
@@ -1110,7 +1099,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1097265390}
-  m_HideIfInvisible: 0
 --- !u!1 &1214798294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 38369dcf3378443bfbda22de66e5e333, type: 3}
   m_Type: 0
@@ -1172,7 +1160,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1214798294}
-  m_HideIfInvisible: 0
 --- !u!1 &1478634631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 0dda0e5edb04f459e86b6690f092689c, type: 3}
   m_Type: 0
@@ -1234,7 +1221,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478634631}
-  m_HideIfInvisible: 0
 --- !u!1 &1744738717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 0e58b3d222d4743b0995f97529649535, type: 3}
   m_Type: 0
@@ -1296,7 +1282,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1744738717}
-  m_HideIfInvisible: 0
 --- !u!1 &1800117299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1327,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 0dda0e5edb04f459e86b6690f092689c, type: 3}
   m_Type: 0
@@ -1358,7 +1343,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800117299}
-  m_HideIfInvisible: 0
 --- !u!1 &1976368435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Mat: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: de631d285ab6a41fab706fb7d889192a, type: 3}
   m_Type: 0
@@ -1563,4 +1547,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066004620}
-  m_HideIfInvisible: 0
