@@ -221,7 +221,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
+  m_Father: {fileID: 400010}
   m_RootOrder: 1
 --- !u!4 &400002
 Transform:
@@ -246,7 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
-  - {fileID: 400000}
+  - {fileID: 400018}
   m_Father: {fileID: 400024}
   m_RootOrder: 3
 --- !u!4 &400006
@@ -259,7 +259,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400010}
+  m_Father: {fileID: 400016}
   m_RootOrder: 1
 --- !u!4 &400008
 Transform:
@@ -284,7 +284,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
-  - {fileID: 400006}
+  - {fileID: 400000}
   m_Father: {fileID: 400024}
   m_RootOrder: 2
 --- !u!4 &400012
@@ -297,7 +297,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400016}
+  m_Father: {fileID: 400022}
   m_RootOrder: 1
 --- !u!4 &400014
 Transform:
@@ -322,7 +322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
-  - {fileID: 400012}
+  - {fileID: 400006}
   m_Father: {fileID: 400024}
   m_RootOrder: 1
 --- !u!4 &400018
@@ -335,7 +335,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400022}
+  m_Father: {fileID: 400004}
   m_RootOrder: 1
 --- !u!4 &400020
 Transform:
@@ -360,7 +360,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400020}
-  - {fileID: 400018}
+  - {fileID: 400012}
   m_Father: {fileID: 400024}
   m_RootOrder: 0
 --- !u!4 &400024
@@ -498,6 +498,107 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
+    - - {x: 1120, y: -360}
+      - {x: 1080, y: -360}
+      - {x: 1080, y: -400}
+      - {x: 1120, y: -400}
+    - - {x: 280, y: -360}
+      - {x: 240, y: -360}
+      - {x: 240, y: -400}
+      - {x: 280, y: -400}
+    - - {x: 1000, y: -400}
+      - {x: 960, y: -400}
+      - {x: 960, y: -440}
+      - {x: 1000, y: -440}
+--- !u!60 &6000002
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: 640, y: -120}
+      - {x: 680, y: -120}
+      - {x: 680, y: -160}
+      - {x: 720, y: -160}
+      - {x: 720, y: -200}
+      - {x: 734, y: -200}
+      - {x: 734, y: -226}
+      - {x: 755, y: -226}
+      - {x: 755, y: -200}
+      - {x: 760, y: -200}
+      - {x: 760, y: -160}
+      - {x: 800, y: -160}
+      - {x: 800, y: -120}
+      - {x: 840, y: -120}
+      - {x: 840, y: -80}
+      - {x: 640, y: -80}
+    - - {x: 320, y: -120}
+      - {x: 360, y: -120}
+      - {x: 360, y: -160}
+      - {x: 400, y: -160}
+      - {x: 400, y: -200}
+      - {x: 414, y: -200}
+      - {x: 414, y: -226}
+      - {x: 435, y: -226}
+      - {x: 435, y: -200}
+      - {x: 440, y: -200}
+      - {x: 440, y: -160}
+      - {x: 480, y: -160}
+      - {x: 480, y: -120}
+      - {x: 520, y: -120}
+      - {x: 520, y: -80}
+      - {x: 320, y: -80}
+--- !u!60 &6000004
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: 0, y: -120}
+      - {x: 1200, y: -120}
+      - {x: 1200, y: 0}
+      - {x: 0, y: 0}
+    - - {x: 1200, y: -400}
+      - {x: 1000, y: -400}
+      - {x: 1000, y: -440}
+      - {x: 960, y: -440}
+      - {x: 960, y: -400}
+      - {x: 800, y: -400}
+      - {x: 800, y: -520}
+      - {x: 1200, y: -520}
+    - - {x: 0, y: -520}
+      - {x: 480, y: -520}
+      - {x: 480, y: -400}
+      - {x: 0, y: -400}
+    - - {x: 640, y: -400}
+      - {x: 600, y: -400}
+      - {x: 600, y: -520}
+      - {x: 640, y: -520}
+    - - {x: 760, y: -400}
+      - {x: 720, y: -400}
+      - {x: 720, y: -520}
+      - {x: 760, y: -520}
+--- !u!60 &6000006
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
     - - {x: 922, y: -402}
       - {x: 920, y: -402}
       - {x: 920, y: -390}
@@ -552,107 +653,6 @@ PolygonCollider2D:
       - {x: 162, y: -389}
       - {x: 162, y: -403}
       - {x: 202, y: -403}
---- !u!60 &6000002
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: 1120, y: -360}
-      - {x: 1080, y: -360}
-      - {x: 1080, y: -400}
-      - {x: 1120, y: -400}
-    - - {x: 280, y: -360}
-      - {x: 240, y: -360}
-      - {x: 240, y: -400}
-      - {x: 280, y: -400}
-    - - {x: 1000, y: -400}
-      - {x: 960, y: -400}
-      - {x: 960, y: -440}
-      - {x: 1000, y: -440}
---- !u!60 &6000004
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: 640, y: -120}
-      - {x: 680, y: -120}
-      - {x: 680, y: -160}
-      - {x: 720, y: -160}
-      - {x: 720, y: -200}
-      - {x: 734, y: -200}
-      - {x: 734, y: -226}
-      - {x: 755, y: -226}
-      - {x: 755, y: -200}
-      - {x: 760, y: -200}
-      - {x: 760, y: -160}
-      - {x: 800, y: -160}
-      - {x: 800, y: -120}
-      - {x: 840, y: -120}
-      - {x: 840, y: -80}
-      - {x: 640, y: -80}
-    - - {x: 320, y: -120}
-      - {x: 360, y: -120}
-      - {x: 360, y: -160}
-      - {x: 400, y: -160}
-      - {x: 400, y: -200}
-      - {x: 414, y: -200}
-      - {x: 414, y: -226}
-      - {x: 435, y: -226}
-      - {x: 435, y: -200}
-      - {x: 440, y: -200}
-      - {x: 440, y: -160}
-      - {x: 480, y: -160}
-      - {x: 480, y: -120}
-      - {x: 520, y: -120}
-      - {x: 520, y: -80}
-      - {x: 320, y: -80}
---- !u!60 &6000006
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100018}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: 0, y: -120}
-      - {x: 1200, y: -120}
-      - {x: 1200, y: 0}
-      - {x: 0, y: 0}
-    - - {x: 1200, y: -400}
-      - {x: 1000, y: -400}
-      - {x: 1000, y: -440}
-      - {x: 960, y: -440}
-      - {x: 960, y: -400}
-      - {x: 800, y: -400}
-      - {x: 800, y: -520}
-      - {x: 1200, y: -520}
-    - - {x: 0, y: -520}
-      - {x: 480, y: -520}
-      - {x: 480, y: -400}
-      - {x: 0, y: -400}
-    - - {x: 640, y: -400}
-      - {x: 600, y: -400}
-      - {x: 600, y: -520}
-      - {x: 640, y: -520}
-    - - {x: 760, y: -400}
-      - {x: 720, y: -400}
-      - {x: 720, y: -520}
-      - {x: 760, y: -520}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
