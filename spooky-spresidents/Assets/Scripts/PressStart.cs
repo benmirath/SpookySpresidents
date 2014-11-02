@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PressStart : MonoBehaviour {
 	public void PressStartFunction () {
-		Application.LoadLevel("Tileset Chunks");
+		Application.LoadLevel("level");
 	}
 
 	// Use this for initialization
