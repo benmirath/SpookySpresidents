@@ -31,16 +31,16 @@ public class GhostScript : MonoBehaviour {
 		if (Input.GetButtonDown ("Power 1") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3")) {
 					
 		}
-		if (Input.GetButtonDown ("Power 1")) {
+		if (Input.GetButtonDown ("Power 1") && OnFirstPower != null) {
 			OnFirstPower();
 		}
-		if (Input.GetButtonDown ("Power 2")) {
+		if (Input.GetButtonDown ("Power 2") && OnSecondPower != null) {
 			OnSecondPower();
 		}
-		if (Input.GetButtonDown ("Power 3")) {
+		if (Input.GetButtonDown ("Power 3") && OnThirdPower != null) {
 			OnThirdPower();
 		}
-		if (Input.GetButtonDown ("Power 4")) {
+		if (Input.GetButtonDown ("Power 4") && OnFourthPower != null) {
 			OnFourthPower();
 		}
 	}
