@@ -7,12 +7,16 @@ public class Treadmill : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		GhostScript.OnSecondPower += FlipDirection;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void FlipDirection () {
+		right = !right;
 	}
 	void OnTriggerStay2D (Collider2D collider) {
 		float dir = 0;
