@@ -150,10 +150,12 @@ public class MonsterController : MonoBehaviour {
 
 	}
 	void Possession () {
-		if (enemyType == EnemyType.Gommba) {
-			rigidbody2D.AddForce (transform.up * jumpForce);
-		} else {
-			StartCoroutine(Explosion());
+		if (renderer.isVisible) {
+			if (enemyType == EnemyType.Gommba) {
+				rigidbody2D.AddForce (transform.up * jumpForce);
+			} else {
+				StartCoroutine (Explosion ());
+			}
 		}
 	}
 	

@@ -17,6 +17,7 @@ public class Stalactite : MonoBehaviour {
 		}
 	}
 	void TriggerFall () {
-		falling = true;
+		if (renderer.isVisible)
+			falling = true;
 	}
 }

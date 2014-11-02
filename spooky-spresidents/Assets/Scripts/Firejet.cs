@@ -18,7 +18,8 @@ public class Firejet : MonoBehaviour {
 	}
 
 	void StartJet () {
-		StartCoroutine (TriggerJet());
+		if (renderer.isVisible)
+			StartCoroutine (TriggerJet());
 	}
 
 	IEnumerator TriggerJet () {

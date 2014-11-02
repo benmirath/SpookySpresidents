@@ -45,7 +45,8 @@ public class MovingPlatform : MonoBehaviour {
 	}
 
 	void FlipDir () {
-		right = !right;
+		if (renderer.isVisible)
+			right = !right;
 	}
 	
 	// Update is called once per frame
