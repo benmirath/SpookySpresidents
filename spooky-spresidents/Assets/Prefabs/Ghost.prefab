@@ -46,6 +46,9 @@ MonoBehaviour:
   power2Cooldown: 0
   power3Cooldown: 0
   power4Cooldown: 0
+  bounceTimer: 1
+  bounceDist: -500
+  bounceSpeed: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
