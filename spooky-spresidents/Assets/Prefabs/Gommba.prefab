@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a313565355c42f7a3a3dc45e516a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: 0
   idleTimer: 3
   waypointLeft: {fileID: 400006}
   waypointRight: {fileID: 400008}
@@ -246,6 +247,8 @@ MonoBehaviour:
     m_Bits: 256
   jumpCount: 2
   jumpForce: 6
+  rocketExplosion: {fileID: 0}
+  rocketExplosionParticle: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

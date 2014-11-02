@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PressStart : MonoBehaviour {
 	public void PressStartFunction () {
-		Debug.Log ("Working");
 		Application.LoadLevel("Final Stage Chunks");
 	}
 

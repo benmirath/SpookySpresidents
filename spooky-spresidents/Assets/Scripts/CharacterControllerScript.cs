@@ -76,7 +76,8 @@ if (!grounded) return;
 
 			//Move our character ten times our move input
 			if (!crouching) {
-				rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
+//				rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
+				rigidbody2D.AddForce(new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y));
 				if (rigidbody2D.velocity != Vector2.zero) {
 					if (rigidbody2D.velocity.y != 0)
 						animation.AnimationName = "Jump";
