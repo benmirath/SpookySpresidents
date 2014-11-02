@@ -29,7 +29,7 @@ public class Firejet : MonoBehaviour {
 			transform.Translate (new Vector3 (-extendSpeed, 0, 0));
 			yield return new WaitForFixedUpdate();
 		}
-		while (rigidbody2D.position.y < originalYPos) {
+		while (rigidbody2D.position.y < originalYPos+ 20f) {
 			transform.Translate (new Vector3 (extendSpeed, 0, 0));
 			yield return new WaitForFixedUpdate();
 		} 
