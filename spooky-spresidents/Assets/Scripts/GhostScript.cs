@@ -30,6 +30,9 @@ public class GhostScript : MonoBehaviour {
 		if (Input.GetButtonDown ("Power 1")) {
 			OnFirstPower();
 		}
+		if (Input.GetButtonDown ("Power 2")) {
+			OnSecondPower();
+		}
 	}
 
 	float bounceTimer = 1.0f;
@@ -58,5 +61,8 @@ public class GhostScript : MonoBehaviour {
 		Debug.Log ("Done");
 		yield break;
 	}
+//	public IEnumerator enemyBounce () {
+//
+//	}
 
 }

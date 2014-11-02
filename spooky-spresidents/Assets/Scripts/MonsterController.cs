@@ -2,6 +2,11 @@
 using System.Collections;
 
 public class MonsterController : MonoBehaviour {
+	public enum EnemyType {
+		Gommba,
+		BulletBob
+	}
+	public EnemyType enemyType;
 //	public float defaultHSpeed;
 //	public float defaultVSpeed;
 	public float idleTimer = 3f;
@@ -47,7 +52,17 @@ public class MonsterController : MonoBehaviour {
 		
 		hitBox = GetComponent<BoxCollider2D> ();
 		jumpCountStore = jumpCount;
-		StartCoroutine (PatrolRoute());
+		if (enemyType == EnemyType.Gommba) {
+			StartCoroutine (PatrolRoute ());
+		} else {
+			Animation anim = GetComponent<Animation>();
+//			anim.playAutomatically = true;
+			anim.Play();
+
+			Debug.Log (anim);
+		}
+//		GhostScript ghost = GameObject.FindGameObjectWithTag ("Ghost").GetComponent<GhostScript>();
+		GhostScript.OnSecondPower += Possession;
 	}
 
 	bool walkRight = true;
@@ -75,6 +90,7 @@ public class MonsterController : MonoBehaviour {
 			yield return null;		
 		}
 	}
+
 	
 	void FixedUpdate () {
 		//Set the boolean "Ground" based on the small Vector3 called groundCheck, that will toggle based on whatever is or isn't ground
@@ -86,28 +102,19 @@ public class MonsterController : MonoBehaviour {
 			if (grounded) {
 				jumpCount = jumpCountStore;
 			}
-			
-			//Set the vSpeed value in our animator based on our upward velocity
-			//anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
-			
-			/*
-//Use this if you want to have no air control during jumps
-if (!grounded) return;
-*/
-			
-			//Get a new float based on our Horizontal movement input
-//			currentHSpeed = Input.GetAxis ("Horizontal");
-			//		currentVSpeed = Input.GetAxis ("Vertical");
-			//Set the Speed value in our animator based on the move float
-			//anim.SetFloat ("Speed", Mathf.Abs (move));
-			//anim.SetFloat ("cSpeed", move_v);
-			
+
 			//Move our character ten times our move input
+			if (enemyType == EnemyType.BulletBob) {
+				currentHSpeed = -1;
+			}
+
 			if (!crouching) {
+				Debug.Log ("flying: "+enemyType);
+				Debug.Log (rigidbody2D.velocity);
 				rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
-				if (rigidbody2D.velocity != Vector2.zero) {
+				if (rigidbody2D.velocity != Vector2.zero && enemyType == EnemyType.Gommba) {
 					animation.AnimationName = "Walking";					
-				} else {
+				} else if (enemyType == EnemyType.Gommba) {
 					animation.AnimationName = "Idle";
 				}
 				hitBox.enabled = true;
@@ -122,34 +129,38 @@ if (!grounded) return;
 			}
 			
 			//If we are moving and facing left, flip; Or if we are not moving and facing right, flip
-			if (currentHSpeed > 0 && !facingRight) {
+			if (currentHSpeed > 0 && facingRight) {
 				Flip ();
-			} else if (currentHSpeed < 0 && facingRight) {
+			} else if (currentHSpeed < 0 && !facingRight) {
 				Flip ();
 			}
 		}
 	}
 
+	public CircleCollider2D rocketExplosion;
+	public ParticleSystem rocketExplosionParticle;
+	IEnumerator Explosion () {
+		float timer = rocketExplosionParticle.duration;
+		rocketExplosion.enabled = true;
+		rocketExplosionParticle.Play ();
+		yield return new WaitForSeconds (timer);
+		rocketExplosion.enabled = false;
+		Die ();
+		yield break;
 
+	}
+	void Possession () {
+		if (enemyType == EnemyType.Gommba) {
+			rigidbody2D.AddForce (transform.up * jumpForce);
+		} else {
+			StartCoroutine(Explosion());
+		}
+	}
 	
 	void Die () {
 		GameObject.Destroy (gameObject);
 	}
-	
-	
-	void Update(){
-		if (alive) {
-//			Debug.Log (animation.state);
-			if ((grounded || jumpCount > 1) && Input.GetButtonDown ("Jump")) {
-				rigidbody2D.AddForce(transform.up * jumpForce);
-				Debug.Log(rigidbody2D.velocity);
-				Debug.Log(jumpForce);
-				jumpCount -= 1;
-				animation.loop = false;
-			}
-		}
-	}
-	
+
 	//Manages Left/Right facing
 	void Flip() {
 		//I am now not facing the opposite way
