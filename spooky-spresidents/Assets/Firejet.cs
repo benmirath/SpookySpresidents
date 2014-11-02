@@ -4,11 +4,12 @@ using System.Collections;
 public class Firejet : MonoBehaviour {
 	float startPoint = 50f;
 	float endPoint = -50f;
-	float extendDist = 100;
+	public float extendDist = 100;
+	public float extendSpeed = 2f;
 
 	// Use this for initialization
 	void Start () {
-	
+		GhostScript.OnThirdPower += StartJet;
 	}
 	
 	// Update is called once per frame
@@ -16,20 +17,22 @@ public class Firejet : MonoBehaviour {
 	
 	}
 
+	void StartJet () {
+		StartCoroutine (TriggerJet());
+	}
+
 	IEnumerator TriggerJet () {
 		float originalYPos = rigidbody2D.position.y;
 		float destinationYPos = originalYPos - extendDist;
 		
-//		while (level.rigidbody2D.position.y > bounceDist) {
-//			level.rigidbody2D.MovePosition (new Vector2 (0, level.rigidbody2D.position.y-bounceSpeed));
-//			Debug.Log(level.rigidbody2D.position);
-//			yield return new WaitForFixedUpdate();
-//		}
-//		while (level.rigidbody2D.position.y < originalYPos) {
-//			level.rigidbody2D.MovePosition (new Vector2 (0, level.rigidbody2D.position.y+bounceSpeed));
-//			Debug.Log(level.rigidbody2D.position);
-//			yield return new WaitForFixedUpdate();
-//		} 
+		while (rigidbody2D.position.y > destinationYPos) {
+			transform.Translate (new Vector3 (-extendSpeed, 0, 0));
+			yield return new WaitForFixedUpdate();
+		}
+		while (rigidbody2D.position.y < originalYPos) {
+			transform.Translate (new Vector3 (extendSpeed, 0, 0));
+			yield return new WaitForFixedUpdate();
+		} 
 		yield break;
 	}
 }
