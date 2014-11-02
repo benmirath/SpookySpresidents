@@ -108,7 +108,7 @@ public class MonsterController : MonoBehaviour {
 				currentHSpeed = -1;
 			}
 
-			if (!crouching) {
+			if (!crouching && renderer.isVisible) {
 				Debug.Log ("flying: "+enemyType);
 				Debug.Log (rigidbody2D.velocity);
 				rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
