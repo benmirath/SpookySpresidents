@@ -12,6 +12,8 @@ public class MovingPlatform : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine (Movement ());
+
+		GhostScript.OnThirdPower += FlipDir;
 	}
 	IEnumerator Movement () {
 		while (true) {
@@ -40,6 +42,10 @@ public class MovingPlatform : MonoBehaviour {
 			rigidbody2D.velocity = new Vector2 (dir * speed, rigidbody2D.velocity.y);
 			yield return null;		
 		}
+	}
+
+	void FlipDir () {
+		right = !right;
 	}
 	
 	// Update is called once per frame
