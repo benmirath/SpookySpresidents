@@ -20,6 +20,7 @@ public class Firewheel : MonoBehaviour {
 	}
 
 	void FlipDir () {
-		rotationSpeed *= -1;
+		if (renderer.isVisible)
+			rotationSpeed *= -1;
 	}
 }

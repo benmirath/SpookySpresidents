@@ -61,7 +61,7 @@ public class CharacterControllerScript : MonoBehaviour {
 
 			//If I'm on the ground, reset my available jumps back to the default
 			if (grounded) {
-					jumpCount = jumpCountStore;
+				jumpCount = jumpCountStore;
 			}
 
 			//Set the vSpeed value in our animator based on our upward velocity
@@ -74,6 +74,9 @@ if (!grounded) return;
 
 			//Get a new float based on our Horizontal movement input
 			currentHSpeed = Input.GetAxis ("Horizontal");
+			if (currentHSpeed != 0 && grounded && footsteps.isPlaying == false) {
+				footsteps.Play ();
+			}
 //		currentVSpeed = Input.GetAxis ("Vertical");
 			//Set the Speed value in our animator based on the move float
 			//anim.SetFloat ("Speed", Mathf.Abs (move));
@@ -90,7 +93,7 @@ if (!grounded) return;
 					else
 						animation.AnimationName = "Walking";
 					if (grounded && footsteps.isPlaying == false) {
-						footsteps.Play();
+//						footsteps.Play();
 					} else {
 						footsteps.Stop();
 					}
