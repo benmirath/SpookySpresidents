@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GUIScript : MonoBehaviour {
 	private float cool_a = 1f;
-	private bool HasUsedPower = false;
+	public bool HasUsedPower = false;
 	public string Power;
 	public string InputKey;
 	public float CooldownLength;
