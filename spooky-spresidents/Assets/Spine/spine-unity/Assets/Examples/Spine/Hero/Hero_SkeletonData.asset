@@ -14,28 +14,7 @@ MonoBehaviour:
   atlasAsset: {fileID: 11400000, guid: a071d9faa273ab047939cccdcacddc55, type: 2}
   skeletonJSON: {fileID: 4900000, guid: 4d269c9fcaaba024fb93b58c75bcafdd, type: 3}
   scale: .00999999978
-  fromAnimation:
-  - Idle
-  - Walk
-  - Idle
-  - Run
-  - Walk
-  - Run
-  - Jump
-  toAnimation:
-  - Walk
-  - Idle
-  - Run
-  - Idle
-  - Run
-  - Walk
-  - Fall
-  duration:
-  - .200000003
-  - .200000003
-  - .200000003
-  - .200000003
-  - .200000003
-  - .200000003
-  - .200000003
-  defaultMix: .0500000007
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: .200000003

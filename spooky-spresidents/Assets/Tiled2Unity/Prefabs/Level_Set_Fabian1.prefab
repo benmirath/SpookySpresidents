@@ -172,7 +172,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400010}
+  m_Father: {fileID: 400004}
   m_RootOrder: 1
 --- !u!4 &400002
 Transform:
@@ -197,7 +197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
-  - {fileID: 400012}
+  - {fileID: 400000}
   m_Father: {fileID: 400018}
   m_RootOrder: 2
 --- !u!4 &400006
@@ -210,7 +210,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400016}
+  m_Father: {fileID: 400010}
   m_RootOrder: 1
 --- !u!4 &400008
 Transform:
@@ -235,7 +235,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
-  - {fileID: 400000}
+  - {fileID: 400006}
   m_Father: {fileID: 400018}
   m_RootOrder: 1
 --- !u!4 &400012
@@ -248,7 +248,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
+  m_Father: {fileID: 400016}
   m_RootOrder: 1
 --- !u!4 &400014
 Transform:
@@ -273,7 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
-  - {fileID: 400006}
+  - {fileID: 400012}
   m_Father: {fileID: 400018}
   m_RootOrder: 0
 --- !u!4 &400018
@@ -383,6 +383,21 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
+    - - {x: 1160, y: -280}
+      - {x: 840, y: -280}
+      - {x: 840, y: -320}
+      - {x: 1160, y: -320}
+--- !u!60 &6000002
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
     - - {x: 280, y: -120}
       - {x: 320, y: -120}
       - {x: 320, y: -160}
@@ -399,12 +414,12 @@ PolygonCollider2D:
       - {x: 480, y: -120}
       - {x: 480, y: -80}
       - {x: 280, y: -80}
---- !u!60 &6000002
+--- !u!60 &6000004
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
+  m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -440,21 +455,6 @@ PolygonCollider2D:
       - {x: 560, y: -400}
       - {x: 560, y: -520}
       - {x: 600, y: -520}
---- !u!60 &6000004
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: 1160, y: -280}
-      - {x: 840, y: -280}
-      - {x: 840, y: -320}
-      - {x: 1160, y: -320}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
