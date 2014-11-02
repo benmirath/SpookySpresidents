@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class CharacterControllerScript : MonoBehaviour {
+	public float timeScale = 1;
+
 	private float currentHSpeed;
 	private float currentVSpeed;
 	public float defaultHSpeed;
@@ -77,7 +79,8 @@ if (!grounded) return;
 			//Move our character ten times our move input
 			if (!crouching) {
 //				rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
-				rigidbody2D.AddForce(new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y));
+				rigidbody2D.AddForce(new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y) * timeScale);
+//				rigidbody2D.AddForce(new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y));
 				if (rigidbody2D.velocity != Vector2.zero) {
 					if (rigidbody2D.velocity.y != 0)
 						animation.AnimationName = "Jump";
@@ -123,7 +126,8 @@ if (!grounded) return;
 		if (alive) {
 			//Debug.Log (animation.state);
 			if ((grounded || jumpCount > 1) && Input.GetButtonDown ("Jump")) {
-				rigidbody2D.AddForce(transform.up * jumpForce);
+				rigidbody2D.AddForce((transform.up * jumpForce) * timeScale);
+//				rigidbody2D.AddForce((transform.up * jumpForce));
 				Debug.Log(rigidbody2D.velocity);
 				Debug.Log(jumpForce);
 				jumpCount -= 1;

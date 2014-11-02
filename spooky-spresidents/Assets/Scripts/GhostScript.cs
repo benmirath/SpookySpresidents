@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GhostScript : MonoBehaviour {
-	public PlayerScript target;
+	public CharacterControllerScript target;
 	public GameObject level;
 
 	public float powerStartup;
@@ -23,15 +23,25 @@ public class GhostScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		OnFirstPower += StartBounce;
+		OnFourthPower += StartSlowdown;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetButtonDown ("Power 1") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3")) {
+					
+		}
 		if (Input.GetButtonDown ("Power 1")) {
 			OnFirstPower();
 		}
 		if (Input.GetButtonDown ("Power 2")) {
 			OnSecondPower();
+		}
+		if (Input.GetButtonDown ("Power 3")) {
+			OnThirdPower();
+		}
+		if (Input.GetButtonDown ("Power 4")) {
+			OnFourthPower();
 		}
 	}
 
@@ -58,9 +68,22 @@ public class GhostScript : MonoBehaviour {
 			yield return new WaitForFixedUpdate();
 		} 
 		yield break;
-		Debug.Log ("Done");
+	}
+	float slowdownDuration = 1f;
+	void StartSlowdown () {
+		StartCoroutine (TimeSlowdown ());
+	}
+	public IEnumerator TimeSlowdown () {
+		float grav = target.rigidbody2D.gravityScale;
+
+		target.rigidbody2D.gravityScale = grav / 5;
+		target.timeScale = 0.20f;
+		yield return new WaitForSeconds (slowdownDuration);
+		target.rigidbody2D.gravityScale = grav;
+		target.timeScale = 1f;
 		yield break;
 	}
+
 //	public IEnumerator enemyBounce () {
 //
 //	}
