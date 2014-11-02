@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: gommbaAtlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 0}
-  materials: []
+  atlasFile: {fileID: 4900000, guid: 8b0b78887e7ae4bd5813e04a6d341c14, type: 3}
+  materials:
+  - {fileID: 2100000, guid: d7e4916b29c404400999d15c5842e618, type: 2}

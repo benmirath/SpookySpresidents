@@ -115,16 +115,11 @@ if (!grounded) return;
 		if (alive) {
 			Debug.Log (animation.state);
 			if ((grounded || jumpCount > 1) && Input.GetButtonDown ("Jump")) {
-
-				//anim.SetBool ("Ground", grounded);
-//				rigidbody2D.AddForce (new Vector2 (0, jumpForce));
 				rigidbody2D.AddForce(transform.up * jumpForce);
 				Debug.Log(rigidbody2D.velocity);
 				Debug.Log(jumpForce);
 				jumpCount -= 1;
-//				animation.loop = false;
-//				animation.AnimationName = "Jump";
-//			if (animation.state
+				animation.loop = false;
 			}
 		}
 	}
