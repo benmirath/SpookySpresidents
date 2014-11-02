@@ -106,8 +106,14 @@ if (!grounded) return;
 		}
 	}
 
-	void Die () {
+	void OnCollisionEnter2D (Collision2D collision) {
+		if (collision.collider.tag == "Enemy") {
+			Die ();
+		}
+	}
 
+	void Die () {
+		GameObject.Destroy (this.gameObject);
 	}
 
 
