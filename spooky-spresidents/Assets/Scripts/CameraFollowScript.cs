@@ -7,12 +7,13 @@ public class CameraFollowScript : MonoBehaviour {
 	private GameObject[] enemy;
 	// Use this for initialization
 	void Start () {
+//		enemy = GameObject.FindGameObjectsWithTag ("Enemy");
+//		foreach ()
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		enemy = GameObject.FindGameObjectsWithTag ("Enemy");
-		/*bg_flip = this.transform.FindChild ("Background").transform.position.z;
+				/*bg_flip = this.transform.FindChild ("Background").transform.position.z;
 		if (!target.GetComponent<CharacterControllerScript> ().facingRight) {
 			bg_flip *= -1;
 		}
