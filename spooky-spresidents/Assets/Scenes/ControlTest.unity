@@ -1494,18 +1494,18 @@ Prefab:
     - target: {fileID: 11400000, guid: bc3d1bfae9b194665b079ed54c55092c, type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 234570573}
     - target: {fileID: 11400000, guid: bc3d1bfae9b194665b079ed54c55092c, type: 2}
       propertyPath: level
       value: 
       objectReference: {fileID: 1341494989}
     - target: {fileID: 11400000, guid: bc3d1bfae9b194665b079ed54c55092c, type: 2}
       propertyPath: bounceDist
-      value: -100
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: bc3d1bfae9b194665b079ed54c55092c, type: 2}
       propertyPath: bounceSpeed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc3d1bfae9b194665b079ed54c55092c, type: 2}
@@ -7474,7 +7474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e6cc98704634424892b0fb1ef39d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 234570573}
   level: {fileID: 1341494989}
   powerStartup: 0
   power1Cooldown: 0
@@ -7482,8 +7482,8 @@ MonoBehaviour:
   power3Cooldown: 0
   power4Cooldown: 0
   bounceTimer: 1
-  bounceDist: -100
-  bounceSpeed: 1
+  bounceDist: -300
+  bounceSpeed: 3
 --- !u!4 &526690816
 Transform:
   m_ObjectHideFlags: 0
