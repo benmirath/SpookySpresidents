@@ -2,15 +2,14 @@
 using System.Collections;
 
 public class CameraFollowScript : MonoBehaviour {
-	public PlayerScript target;
+	public GameObject target;
 
 	// Use this for initialization
 	void Start () {
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (target.FindChild("MainCamera"));
+		if (target.GetComponent<CharacterControllerScript> ().facingRight);
 	}
 }

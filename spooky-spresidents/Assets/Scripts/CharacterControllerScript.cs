@@ -18,7 +18,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	public SkeletonAnimation animation;
 
 	public float maxSpeed = 10f;
-	bool facingRight = true;
+	public bool facingRight = true;
 	//Animator anim;
 	BoxCollider2D hitBox;
 	
