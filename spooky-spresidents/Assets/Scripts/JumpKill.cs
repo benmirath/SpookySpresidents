@@ -12,9 +12,12 @@ public class JumpKill : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnCollisionEnter2D (Collision2D collision) {
-		if (collision.collider.tag == "Enemy") {
 
+	void OnTriggerEnter2D (Collider2D collision) {
+		Debug.Log (collision);
+		if (collision.tag == "Enemy") {
+			Debug.Log ("working");
+			GameObject.Destroy(collision.gameObject);
 		}
 	}
 }

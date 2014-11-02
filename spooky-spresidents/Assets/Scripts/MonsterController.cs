@@ -130,12 +130,7 @@ if (!grounded) return;
 		}
 	}
 
-	void OnTriggerEnter2D (Collider2D collision) {
-		Debug.Log (collision);
-		if (collision.collider.tag == "PlayerFeet") {
-			Die();
-		}
-	}
+
 	
 	void Die () {
 		GameObject.Destroy (gameObject);
