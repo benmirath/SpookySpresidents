@@ -121,7 +121,7 @@ if (!grounded) return;
 
 	void Update(){
 		if (alive) {
-			Debug.Log (animation.state);
+			//Debug.Log (animation.state);
 			if ((grounded || jumpCount > 1) && Input.GetButtonDown ("Jump")) {
 				rigidbody2D.AddForce(transform.up * jumpForce);
 				Debug.Log(rigidbody2D.velocity);
