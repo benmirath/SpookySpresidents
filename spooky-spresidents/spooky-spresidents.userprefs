@@ -1,17 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PressStart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Treadmill.cs">
     <Files>
       <File FileName="Assets/Scripts/lib/CC2DTriggerHelper.cs" Line="43" Column="2" />
       <File FileName="Assets/Scripts/GhostScript.cs" Line="40" Column="9" />
       <File FileName="Assets/Scripts/CameraFollowScript.cs" Line="6" Column="2" />
-      <File FileName="Assets/Scripts/CharacterControllerScript.cs" Line="129" Column="12" />
+      <File FileName="Assets/Scripts/CharacterControllerScript.cs" Line="80" Column="88" />
       <File FileName="Assets/Spine/spine-unity/Assets/spine-unity/SkeletonAnimation.cs" Line="42" Column="25" />
       <File FileName="Assets/Scripts/MonsterController.cs" Line="149" Column="3" />
       <File FileName="Assets/Scripts/JumpKill.cs" Line="17" Column="1" />
       <File FileName="Assets/Scripts/DeadZone.cs" Line="16" Column="2" />
       <File FileName="Assets/Scripts/Explosion.cs" Line="16" Column="25" />
-      <File FileName="Assets/Scripts/PressStart.cs" Line="10" Column="24" />
+      <File FileName="Assets/Scripts/PressStart.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/Treadmill.cs" Line="22" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
