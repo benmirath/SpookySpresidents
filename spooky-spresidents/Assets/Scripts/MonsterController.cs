@@ -67,7 +67,7 @@ public class MonsterController : MonoBehaviour {
 
 	bool walkRight = true;
 	IEnumerator PatrolRoute () {
-		while (alive) {
+		while (alive && renderer.isVisible) {
 			if (walkRight) {
 				if (transform.position.x < waypointRight.position.x) {
 					//walk right
@@ -94,7 +94,7 @@ public class MonsterController : MonoBehaviour {
 	
 	void FixedUpdate () {
 		//Set the boolean "Ground" based on the small Vector3 called groundCheck, that will toggle based on whatever is or isn't ground
-		if (alive) {
+		if (alive && renderer.isVisible) {
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 			//anim.SetBool ("Ground", grounded);
 			

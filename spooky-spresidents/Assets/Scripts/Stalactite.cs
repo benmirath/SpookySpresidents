@@ -7,7 +7,7 @@ public class Stalactite : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GhostScript.OnSecondPower += TriggerFall;
+		GhostScript.OnThirdPower += TriggerFall;
 	}
 	
 	// Update is called once per frame
