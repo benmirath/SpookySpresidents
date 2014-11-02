@@ -3,6 +3,9 @@ using System.Collections;
 
 public class CharacterControllerScript : MonoBehaviour {
 	public float timeScale = 1;
+	public AudioSource footsteps;
+	public AudioSource firstJump;
+	public AudioSource secondJump;
 
 	private float currentHSpeed;
 	private float currentVSpeed;
@@ -86,9 +89,15 @@ if (!grounded) return;
 						animation.AnimationName = "Jump";
 					else
 						animation.AnimationName = "Walking";
+					if (grounded && footsteps.isPlaying == false) {
+						footsteps.Play();
+					} else {
+						footsteps.Stop();
+					}
 
 				} else {
 					animation.AnimationName = "Idle";
+					footsteps.Stop();
 				}
 				hitBox.enabled = true;
 			} else {
@@ -124,8 +133,14 @@ if (!grounded) return;
 
 	void Update(){
 		if (alive) {
+
 			//Debug.Log (animation.state);
 			if ((grounded || jumpCount > 1) && Input.GetButtonDown ("Jump")) {
+				if (jumpCount == jumpCountStore) {
+					firstJump.Play();
+				} else {
+					secondJump.Play();
+				}
 				rigidbody2D.AddForce((transform.up * jumpForce) * timeScale);
 //				rigidbody2D.AddForce((transform.up * jumpForce));
 				Debug.Log(rigidbody2D.velocity);
