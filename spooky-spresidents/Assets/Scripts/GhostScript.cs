@@ -20,6 +20,8 @@ public class GhostScript : MonoBehaviour {
 	public delegate void FourthPower();
 	public static event FourthPower OnFourthPower;
 
+	public GUIScript GUIName;
+
 	// Use this for initialization
 	void Start () {
 		OnFirstPower += StartBounce;
@@ -28,6 +30,8 @@ public class GhostScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 		if (Input.GetButtonDown ("Power 1") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3") || Input.GetButtonDown ("Power 3")) {
 					
 		}
