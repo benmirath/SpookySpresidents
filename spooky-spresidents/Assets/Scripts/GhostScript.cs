@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GhostScript : MonoBehaviour {
-	public PlayerScript target;
+	public CharacterControllerScript target;
 	public GameObject level;
 
 	public float powerStartup;
@@ -61,6 +61,11 @@ public class GhostScript : MonoBehaviour {
 		Debug.Log ("Done");
 		yield break;
 	}
+	float slowdownDuration = 1f;
+	public IEnumerator TimeSlowdown () {
+
+	}
+
 //	public IEnumerator enemyBounce () {
 //
 //	}

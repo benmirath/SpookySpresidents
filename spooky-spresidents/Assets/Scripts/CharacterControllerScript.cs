@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class CharacterControllerScript : MonoBehaviour {
+	public float timeScale = 1;
+
 	private float currentHSpeed;
 	private float currentVSpeed;
 	public float defaultHSpeed;
@@ -77,7 +79,7 @@ if (!grounded) return;
 			//Move our character ten times our move input
 			if (!crouching) {
 //				rigidbody2D.velocity = new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y);
-				rigidbody2D.AddForce(new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y));
+				rigidbody2D.AddForce(new Vector2 (currentHSpeed * maxSpeed, rigidbody2D.velocity.y) * timeScale);
 				if (rigidbody2D.velocity != Vector2.zero) {
 					if (rigidbody2D.velocity.y != 0)
 						animation.AnimationName = "Jump";
