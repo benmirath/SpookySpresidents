@@ -393,7 +393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
-  - {fileID: 400036}
+  - {fileID: 400030}
   m_Father: {fileID: 400042}
   m_RootOrder: 6
 --- !u!4 &400006
@@ -558,7 +558,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400040}
+  m_Father: {fileID: 400004}
   m_RootOrder: 1
 --- !u!4 &400032
 Transform:
@@ -596,7 +596,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400004}
+  m_Father: {fileID: 400040}
   m_RootOrder: 1
 --- !u!4 &400038
 Transform:
@@ -621,7 +621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400038}
-  - {fileID: 400030}
+  - {fileID: 400036}
   m_Father: {fileID: 400042}
   m_RootOrder: 0
 --- !u!4 &400042
@@ -974,6 +974,29 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
+    - - {x: 720, y: -240}
+      - {x: 440, y: -240}
+      - {x: 440, y: -280}
+      - {x: 720, y: -280}
+    - - {x: 600, y: -400}
+      - {x: 480, y: -400}
+      - {x: 480, y: -440}
+      - {x: 600, y: -440}
+    - - {x: 400, y: -400}
+      - {x: 280, y: -400}
+      - {x: 280, y: -440}
+      - {x: 400, y: -440}
+--- !u!60 &6000012
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
     - - {x: 0, y: -200}
       - {x: 40, y: -200}
       - {x: 40, y: -160}
@@ -1022,29 +1045,6 @@ PolygonCollider2D:
       - {x: 840, y: -440}
       - {x: 840, y: -400}
       - {x: 480, y: -400}
---- !u!60 &6000012
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100036}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Poly:
-    m_Paths:
-    - - {x: 720, y: -240}
-      - {x: 440, y: -240}
-      - {x: 440, y: -280}
-      - {x: 720, y: -280}
-    - - {x: 600, y: -400}
-      - {x: 480, y: -400}
-      - {x: 480, y: -440}
-      - {x: 600, y: -440}
-    - - {x: 400, y: -400}
-      - {x: 280, y: -400}
-      - {x: 280, y: -440}
-      - {x: 400, y: -440}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
