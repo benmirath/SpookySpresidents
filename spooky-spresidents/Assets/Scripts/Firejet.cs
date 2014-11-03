@@ -11,6 +11,9 @@ public class Firejet : MonoBehaviour {
 	void Start () {
 		GhostScript.OnThirdPower += StartJet;
 	}
+	void OnDestroy () {
+		GhostScript.OnThirdPower -= StartJet;
+	}
 	
 	// Update is called once per frame
 	void Update () {

@@ -15,6 +15,9 @@ public class MovingPlatform : MonoBehaviour {
 
 		GhostScript.OnThirdPower += FlipDir;
 	}
+	void OnDestroy () {
+		GhostScript.OnThirdPower -= FlipDir;
+	}
 	IEnumerator Movement () {
 		while (true) {
 			int dir;

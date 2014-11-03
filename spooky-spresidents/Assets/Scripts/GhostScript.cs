@@ -54,6 +54,7 @@ public class GhostScript : MonoBehaviour {
 
 	public void StartBounce () {
 		//Debug.Log ("working");
+		if (this != null)
 		StartCoroutine (levelBounce());
 	}
 	public IEnumerator levelBounce () {
@@ -62,12 +63,12 @@ public class GhostScript : MonoBehaviour {
 
 		while (level.rigidbody2D.position.y > bounceDist) {
 			level.rigidbody2D.MovePosition (new Vector2 (0, level.rigidbody2D.position.y-bounceSpeed));
-			Debug.Log(level.rigidbody2D.position);
+//			Debug.Log(level.rigidbody2D.position);
 			yield return new WaitForFixedUpdate();
 		}
 		while (level.rigidbody2D.position.y < originalYPos) {
 			level.rigidbody2D.MovePosition (new Vector2 (0, level.rigidbody2D.position.y+bounceSpeed));
-			Debug.Log(level.rigidbody2D.position);
+//			Debug.Log(level.rigidbody2D.position);
 			yield return new WaitForFixedUpdate();
 		} 
 		yield break;

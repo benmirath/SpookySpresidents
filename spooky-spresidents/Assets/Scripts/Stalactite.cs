@@ -9,6 +9,9 @@ public class Stalactite : MonoBehaviour {
 	void Start () {
 		GhostScript.OnThirdPower += TriggerFall;
 	}
+	void OnDestroy () {
+		GhostScript.OnThirdPower -= TriggerFall;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -17,7 +20,10 @@ public class Stalactite : MonoBehaviour {
 		}
 	}
 	void TriggerFall () {
-		if (renderer.isVisible)
+		if (this != null && renderer.isVisible)
 			falling = true;
 	}
+
+
+
 }

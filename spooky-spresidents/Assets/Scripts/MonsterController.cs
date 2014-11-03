@@ -64,6 +64,9 @@ public class MonsterController : MonoBehaviour {
 //		GhostScript ghost = GameObject.FindGameObjectWithTag ("Ghost").GetComponent<GhostScript>();
 		GhostScript.OnSecondPower += Possession;
 	}
+	void OnDestroy () {
+		GhostScript.OnSecondPower -= Possession;
+	}
 
 	bool walkRight = true;
 	IEnumerator PatrolRoute () {

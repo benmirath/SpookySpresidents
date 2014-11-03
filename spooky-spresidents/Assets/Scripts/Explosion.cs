@@ -14,9 +14,9 @@ public class Explosion : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D collision) {
 		Debug.Log (collision);
-		if (collision.tag == "Player") {
-			GameObject.Destroy (collision.gameObject);
-			Application.LoadLevel("TitleScreen");
-		}
+//		if (collision.tag == "Player") {
+//			GameObject.Destroy (collision.gameObject);
+//			Application.LoadLevel("TitleScreen");
+//		}
 	}
 }

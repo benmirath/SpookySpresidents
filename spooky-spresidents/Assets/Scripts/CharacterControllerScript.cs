@@ -124,13 +124,18 @@ if (!grounded) return;
 
 	void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.collider.tag == "Enemy") {
-			Die ();
+			StartCoroutine(Die ());
 		}
 	}
 
-	void Die () {
+	IEnumerator Die () {
+		alive = false;
+		animation.AnimationName = "Dying";
+
+		yield return new WaitForSeconds (0.8f);
 		GameObject.Destroy (this.gameObject);
 		Application.LoadLevel ("TitleScreen");
+		yield break;
 	}
 
 

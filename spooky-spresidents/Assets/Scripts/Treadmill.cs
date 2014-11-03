@@ -7,7 +7,10 @@ public class Treadmill : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GhostScript.OnSecondPower += FlipDirection;
+		GhostScript.OnThirdPower += FlipDirection;
+	}
+	void OnDestroy () {
+		GhostScript.OnThirdPower -= FlipDirection;
 	}
 	
 	// Update is called once per frame
